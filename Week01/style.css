@@ -1,0 +1,79 @@
+.half_width_section {
+    width:49%;
+}
+
+.project_desc{
+    width:40%;
+    display: inline-block;
+}
+
+.project_img{
+    width: 59%;
+}
+
+body{
+    padding: 10px 50px 50px 30px;
+    background-color:darkslategrey;
+}
+
+.heading {
+    padding: 20px;
+    color:black;
+    background-color:darkgreen;
+}
+
+.galleryimg{
+    width:32%;
+}
+
+.gearlist{
+    width:20%;
+    background-color:beige;
+    padding:2px;
+    margin:30px;
+    border-radius: 10%;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .button1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+  }
+  
+  .button1:hover {
+    background-color: #4CAF50;
+    color: white;
+    transform: rotate(0.5turn);
+  }
+  
+  .button2 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+  }
+  
+  .button2:hover {
+    background-color: #008CBA;
+    color: white;
+  }
+  
+  .myDiv {
+    border: 5px outset darkolivegreen;
+    background-color: lightblue;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
