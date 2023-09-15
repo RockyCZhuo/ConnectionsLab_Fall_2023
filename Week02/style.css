@@ -1,0 +1,47 @@
+body{
+    background-color: black;
+}
+
+.mid_section{
+    display: block;
+    text-align: center;
+    padding:50% 0;
+}
+
+body {
+    background-image: url('./Photo0.PNG');
+    background-repeat: no-repeat;
+    background-position:center;
+  }
+
+p{
+    color: antiquewhite;
+}
+
+
+.button {
+    border: none;
+    color: #696969;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.6s;
+    cursor: pointer;
+  }
+  
+  .button1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #696969;
+  }
+  
+  .button1:hover {
+    background-color: #8B0000;
+    color: antiquewhite;
+    transform: rotate(1.0turn);
+    border: 2px solid red;
+  }
+  
