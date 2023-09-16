@@ -12,7 +12,7 @@ body {
     background-image: url('./Photo0.PNG');
     background-repeat: no-repeat;
     background-position:center;
-    background-size: 63%;
+    background-size: 63% ;
   }
 
 p{
@@ -26,14 +26,15 @@ p{
     padding: 12px 14px;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 20px;
+    font-family: "Papyrus";
     margin: 4px 2px;
     transition-duration: 0.5s;
     cursor: pointer;
-    height:120px;
-    width:280px;
+    height:160px;
+    width:400px;
     position: absolute;
-    left: 15%;
+    left: 10%;
   }
   
   .button1 {
