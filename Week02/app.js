@@ -26,7 +26,7 @@ function changeContent(){
     //console log to check
     console.log(currentLineCombo*2 +"/" + totalStories);
 
-        pos = 8*currentLineCombo;
+        pos = 12*currentLineCombo-12;
         document.getElementById("buttonContainer").style.padding=pos + "% 0";
         //update displayed content on button
         document.getElementById("textbox").innerHTML = stories[currentLineCombo];
