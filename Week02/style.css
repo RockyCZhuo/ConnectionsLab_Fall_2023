@@ -40,6 +40,7 @@ p{
     background-color: white; 
     color: black; 
     border: 2px solid #696969;
+    box-shadow: 0 8px 16px 0 rgba(247, 21, 21, 0.8), 0 6px 20px 0 rgba(0,0,0,0.19);
   }
   
   .button1:hover {
