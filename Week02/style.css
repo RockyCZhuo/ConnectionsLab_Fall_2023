@@ -12,7 +12,7 @@ body {
     background-image: url('./Photo0.PNG');
     background-repeat: no-repeat;
     background-position:center;
-    background-size: 600px 600px;
+    background-size: 63%;
   }
 
 p{
@@ -33,7 +33,7 @@ p{
     height:120px;
     width:280px;
     position: absolute;
-    left: 25%;
+    left: 15%;
   }
   
   .button1 {
