@@ -1,0 +1,85 @@
+body{
+    background-color: lavenderblush;
+}
+
+.page_imgSection{
+    text-align: center;
+}
+.page_button{
+    background: #eb94d0;
+    
+    background-image: -webkit-linear-gradient(top, #eb94d0, #2079b0);
+    background-image: -moz-linear-gradient(top, #eb94d0, #2079b0);
+    background-image: -ms-linear-gradient(top, #eb94d0, #2079b0);
+    background-image: -o-linear-gradient(top, #eb94d0, #2079b0);
+    background-image: linear-gradient(to bottom, #eb94d0, #2079b0);
+    
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    text-shadow: 3px 2px 1px #9daef5;
+    -webkit-box-shadow: 6px 5px 24px #666666;
+    -moz-box-shadow: 6px 5px 24px #666666;
+    box-shadow: 6px 5px 24px #666666;
+    font-family: Arial;
+    color: #fafafa;
+    font-size: 27px;
+    padding: 19px;
+    text-decoration: none;
+}
+.page_button:hover{
+    background: #2079b0;
+    background-image: -webkit-linear-gradient(top, #2079b0, #eb94d0);
+    background-image: -moz-linear-gradient(top, #2079b0, #eb94d0);
+    background-image: -ms-linear-gradient(top, #2079b0, #eb94d0);
+    background-image: -o-linear-gradient(top, #2079b0, #eb94d0);
+    background-image: linear-gradient(to bottom, #2079b0, #eb94d0);
+    text-decoration: none;
+}
+
+.page_score{
+    text-align: center;
+}
+.page_desc{
+    text-align: center;
+
+}
+
+/* Style the header */
+header {
+    background-color:darkred;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+  }
+  
+  
+/* Style the footer */
+footer {
+    background-color:brown;
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+
+
+  .flex-container {
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: DodgerBlue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .flex-container > div {
+    flex-basis: auto;
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+    align-items: center;
+    background-color: DodgerBlue;
+  }
