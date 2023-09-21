@@ -175,7 +175,7 @@ function arraymove(arr, fromIndex, toIndex) {
 
 function checkAnswer(btNum){
     if(btNum==correctButtonNum){
-        descDisplay("Congrtulations!!!");
+        descDisplay("Congratulations!!!");
         wrongOptionsCounter=0;
         bt00.removeEventListener("click",check00);
         bt01.removeEventListener("click",check01);
