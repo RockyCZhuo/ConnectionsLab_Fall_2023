@@ -1,4 +1,4 @@
-
+console.log("Page is loading");
 let bt00,bt01,bt02,bt03;
 let correctButtonNum = -1;
 let score = 0;
@@ -8,7 +8,7 @@ let maxIndex=809;  //max index in pokedex
 let options=["a","b","c","d"];  //default displayed options 
 let indexArray=[];
 let wrongOptionsCounter = 0;
-
+var img;
 
 window.addEventListener('load', function(){
     //fill the index array, will be used for later random seletion function
@@ -25,12 +25,6 @@ window.addEventListener('load', function(){
     bt02 = document.getElementById("option_02");
     bt03 = document.getElementById("option_03");
 });
-
-function resetButton(){
-
-}
-    
-
 
 
 function check00(){
@@ -117,10 +111,15 @@ function capitalizeFirstLetter(string) {
 
 function setPKMimg(pkmIndex,data,eleID){
     let pkmImgElement = document.getElementById(eleID);
-    pkmImgElement.src = data.sprites.front_default;
-    //descDisplay("Pick the right name!");
+    //pkmImgElement.src = data.sprites.front_default;
+    loadImage(data.sprites.front_default, img => {
+        img.filter(THRESHOLD,1);
+        image(img, 0, 0);
+        
+        pkmImgElement.src = data.sprites.front_default;
+      });
+    
 }
-
 
 
 //select 3 more different pkm names as false options
@@ -141,10 +140,6 @@ function refreshOptions(data){
         fetchWrongPKMName(tempArr[j],k);
         tempArrIndex=j;
     }
-
-
-   
-  //  document.getElementById("option_0"+(optionk+1)).innerHTML 
   
 }
 
@@ -159,8 +154,6 @@ function showOptions(){
     for(let i=0;i<4;i++){
         document.getElementById("option_0"+i).innerHTML = options[i];
     }
-
-
 }
 
 
@@ -202,3 +195,19 @@ function checkAnswer(btNum){
 function descDisplay(msg){
     document.getElementById("page_desc").innerHTML = msg;
 }
+
+//——————————————P5 js————————————————————
+function setup() {
+    createCanvas(100, 100);
+    //img.hide();
+    //background(100);
+  }
+  
+
+  function draw() {
+    if(img){
+        //img.filter(THRESHOLD,0.5);
+        image(img, 0,0,width,height); 
+    }
+    
+  }
