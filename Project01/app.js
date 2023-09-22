@@ -111,6 +111,7 @@ function setPKMimg(pkmIndex, data, eleID) {
     let pkmImgElement = document.getElementById(eleID);
     //pkmImgElement.src = data.sprites.front_default;
     loadImage(data.sprites.front_default, img => {
+        thresholdValue = 1;
         currentImg = img;
         //console.log(img);
         //currentImg.filter(THRESHOLD,1);
@@ -221,7 +222,7 @@ function draw() {
                 enterNext();
             }
         } else if (isReveal == false) {
-            thresholdValue = 1;
+
             filter(THRESHOLD, thresholdValue);
         }
     }
@@ -230,7 +231,6 @@ function draw() {
 
 function enterNext() {
     isReveal = false;
-    thresholdValue = 1;
     getRandomPokemonInfo();
 }
 
