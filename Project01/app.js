@@ -8,7 +8,8 @@ let maxIndex=809;  //max index in pokedex
 let options=["a","b","c","d"];  //default displayed options 
 let indexArray=[];
 let wrongOptionsCounter = 0;
-var img;
+let img;
+let p5Canvas;
 
 window.addEventListener('load', function(){
     //fill the index array, will be used for later random seletion function
@@ -16,9 +17,6 @@ window.addEventListener('load', function(){
         indexArray[i-1]=i;
     }
     console.log('page is Ready to go!');
-
-
-
     getRandomPokemonInfo();
     bt00 = document.getElementById("option_00");
     bt01 = document.getElementById("option_01");
@@ -49,8 +47,6 @@ function check01(){
 //a => return a+10;
 //3. remove 'return' if that's the only thing happening in the function
 //a => a+10;
-
-
 
 
 
@@ -114,8 +110,8 @@ function setPKMimg(pkmIndex,data,eleID){
     //pkmImgElement.src = data.sprites.front_default;
     loadImage(data.sprites.front_default, img => {
         img.filter(THRESHOLD,1);
-        image(img, 0, 0);
-        
+        p5Canvas.clear();
+        image(img, 0, 0,192,192);
         pkmImgElement.src = data.sprites.front_default;
       });
     
@@ -198,16 +194,15 @@ function descDisplay(msg){
 
 //——————————————P5 js————————————————————
 function setup() {
-    createCanvas(100, 100);
+    p5Canvas=createCanvas(192, 192);
+    p5Canvas.parent('page_imgSection');
     //img.hide();
     //background(100);
   }
   
 
   function draw() {
-    if(img){
-        //img.filter(THRESHOLD,0.5);
-        image(img, 0,0,width,height); 
-    }
-    
+
   }
+
+  
