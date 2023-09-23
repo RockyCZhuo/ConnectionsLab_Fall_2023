@@ -119,7 +119,7 @@ function setPKMimg(pkmIndex, data, eleID) {
         //image(currentImg, 0, 0,192,192);
         pkmImgElement.src = data.sprites.front_default;
     });
-    console.log(currentImg);
+    //console.log(currentImg);
 }
 
 
