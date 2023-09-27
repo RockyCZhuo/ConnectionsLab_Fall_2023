@@ -9,7 +9,9 @@
 </head>
 
 <body>
-
+    <audio controls loop>
+        <source src="./SoundFile/20.ogg" type="audio/ogg">
+    </audio>
     <header>Guess who am I?</header>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
     <script src="app.js"></script>
@@ -20,6 +22,7 @@
 
     <section class="page_imgSection" id="page_imgSection">
         <img width="0" id="page_img" alt="Pokemon Image here" class="page_img" />
+        <img id="page_dfruit" class="page_dfruit" />
     </section>
 
     <div class="flex-container">
@@ -30,12 +33,11 @@
     </div>
 
     <footer>
-        <p></p>
+        <p>Pokeapi.co | Made by Rocky Zhuo Cheng.</p>
+        <p>All content is © Nintendo, Game Freak, and The Pokémon Company.</p>
     </footer>
 
-    <audio controls autoplay loop>
-        <source src="./SoundFile/20.ogg" type="audio/ogg">
-    </audio>
+
 </body>
 
 </html>
