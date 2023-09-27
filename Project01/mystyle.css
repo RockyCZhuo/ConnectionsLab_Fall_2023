@@ -1,5 +1,5 @@
 body {
-  background-color: lavenderblush;
+  background-color:antiquewhite;
 
 }
 
@@ -11,6 +11,12 @@ body {
   margin: 0;
   justify-content: center;
   align-items: center;
+}
+
+.page_dfruit{
+  width:192px;
+  position: absolute;
+
 }
 
 .page_button {
