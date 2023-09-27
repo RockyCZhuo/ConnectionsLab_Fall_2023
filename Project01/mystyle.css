@@ -1,6 +1,6 @@
 body {
   background-color: antiquewhite;
-
+  cursor: url("./SoundFile/pkball01.png"), auto;
 }
 
 .page_imgSection {
@@ -50,6 +50,8 @@ body {
   background-image: -o-linear-gradient(top, #2079b0, #eb94d0);
   background-image: linear-gradient(to bottom, #2079b0, #eb94d0);
   text-decoration: none;
+  cursor: url("./SoundFile/pkball01.png"), auto;
+
 }
 
 .page_score {
