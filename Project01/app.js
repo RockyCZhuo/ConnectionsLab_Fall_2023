@@ -10,12 +10,25 @@ let indexArray = [];
 let wrongOptionsCounter = 0;
 let img;
 let currentImg;
-let p5Canva,extraCanvas;
+let p5Canva, extraCanvas;
 let thresholdValue = 1.0;
 let isReveal = false;
 let gif;
+let soundStart, soundCorrect, soundWrong;
 
-window.addEventListener('load', function () {
+
+//——————————————P5 js————————————————————
+
+function preload() {
+
+    soundStart = loadSound("./SoundFile/whosthatpokemon.mp3");
+    soundCorrect = loadSound("./SoundFile/correctSound.mp3");
+    soundWrong = loadSound("./SoundFile/wrongSound.mp3");
+}
+
+function setup() {
+    p5Canvas = createCanvas(192, 192);
+    p5Canvas.parent('page_imgSection');
     //fill the index array, will be used for later random seletion function
     for (let i = 1; i <= 809; i++) {
         indexArray[i - 1] = i;
@@ -26,7 +39,60 @@ window.addEventListener('load', function () {
     bt01 = document.getElementById("option_01");
     bt02 = document.getElementById("option_02");
     bt03 = document.getElementById("option_03");
+}
+
+function beginReveal() {
+    isReveal = true;
+}
+
+function draw() {
+    p5Canvas.clear();
+    if (currentImg) {
+        image(currentImg, 0, 0, 192, 192);
+        if (isReveal == true) {
+            thresholdValue -= (1 / 180);
+            tint(255, (1 - thresholdValue) * 255);
+            if (thresholdValue <= 0) {
+                isReveal = false;
+                enterNext();
+            }
+        } else if (isReveal == false) {
+
+            filter(THRESHOLD, thresholdValue);
+        }
+    }
+}
+
+
+function enterNext() {
+    isReveal = false;
+    getRandomPokemonInfo();
+    removeGif();
+}
+
+function onCorrect() {
+    console.log("Correct!")
+    //show gif
+    document.getElementById("page_dfruit").src = "./SoundFile/d.gif";
+    soundCorrect.setVolume(0.5);
+    soundCorrect.play();
+}
+
+function removeGif() {
+    document.getElementById("page_dfruit").src = "";
+}
+
+function finishLoad() {
+
+}
+
+
+//HTML JS
+
+window.addEventListener('load', function () {
+
 });
+
 
 
 function check00() {
@@ -155,6 +221,8 @@ function showOptions() {
     for (let i = 0; i < 4; i++) {
         document.getElementById("option_0" + i).innerHTML = options[i];
     }
+    soundStart.play();
+
 }
 
 
@@ -181,6 +249,7 @@ function checkAnswer(btNum) {
         beginReveal();
 
     } else {
+        soundWrong.play();
         descDisplay("Sorry, the answer is " + correctName + "!");
         console.log("Sorry, the answer is " + correctName + "!");
         wrongOptionsCounter = 0;
@@ -198,56 +267,4 @@ function checkAnswer(btNum) {
 
 function descDisplay(msg) {
     document.getElementById("page_desc").innerHTML = msg;
-}
-
-//——————————————P5 js————————————————————
-
-function preload(){
-    gif = loadImage("./SoundFile/d.gif");
-}
-
-function setup() {
-    p5Canvas = createCanvas(192, 192);
-    p5Canvas.parent('page_imgSection');
-    //extraCanvas= createGraphics(192,192);
-    //extraCanvas.clear();
-}
-
-function beginReveal() {
-    isReveal = true;
-}
-
-function draw() {
-    p5Canvas.clear();
-    if (currentImg) {
-        image(currentImg, 0, 0, 192, 192);
-        if (isReveal == true) {
-            thresholdValue -= (1 / 180);
-            tint(255, (1 - thresholdValue) * 255);
-            if (thresholdValue <= 0) {
-                isReveal = false;
-                enterNext();
-            }
-        } else if (isReveal == false) {
-
-            filter(THRESHOLD, thresholdValue);
-        }
-    }
-}
-
-
-function enterNext() {
-    isReveal = false;
-    getRandomPokemonInfo();
-    removeGif();
-}
-
-function onCorrect(){
-    console.log("Correct!")
-    //show gif
-    document.getElementById("page_dfruit").src ="./SoundFile/d.gif" ;
-}
-
-function removeGif(){
-    document.getElementById("page_dfruit").src ="" ;
 }
