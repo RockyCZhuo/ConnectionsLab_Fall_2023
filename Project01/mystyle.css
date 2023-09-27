@@ -1,10 +1,14 @@
 body {
-  background-color: antiquewhite;
+  background-color:rgb(242, 222, 215);
   cursor: url("./SoundFile/pkball01.png"), auto;
 }
 
 .page_imgSection {
   text-align: center;
+  z-index: 1;
+  background-image: url("./SoundFile/bgp.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .p5Canvas {
@@ -13,9 +17,24 @@ body {
   align-items: center;
 }
 
+#page_canvas{
+  text-align: center;
+  z-index: 1;
+}
+.page_canvas{
+  text-align: center;
+  z-index: 1;
+}
+.page_bg {
+  width: 192px;
+  position: absolute;
+}
+
+
 .page_dfruit {
   width: 192px;
   position: absolute;
+  z-index: 3;
 
 }
 
@@ -57,27 +76,29 @@ body {
 .page_score {
   text-align: center;
   font-family: Garamond, serif;
+  font-size: 27px;
 }
 
 .page_desc {
   text-align: center;
   font-family: Garamond, serif;
+  font-size: 27px;
 }
 
 /* Style the header */
 header {
-  background-color: darkred;
+  background-color: rgb(176, 45, 46);
   padding: 30px;
   text-align: center;
   font-family: Garamond, serif;
-  font-size: 35px;
-  color: white;
+  font-size: 75px;
+  color: rgb(255, 255, 255);
 }
 
 
 /* Style the footer */
 footer {
-  background-color: brown;
+  background-color: rgb(176, 45, 46);
   padding: 10px;
   text-align: center;
   color: white;
@@ -87,7 +108,7 @@ footer {
 .flex-container {
   flex-wrap: wrap;
   gap: 10px;
-  background-color: DodgerBlue;
+  background-color: rgb(30, 81, 162);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -101,7 +122,7 @@ footer {
   font-size: 30px;
   text-align: center;
   align-items: center;
-  background-color: DodgerBlue;
+  background-color: rgb(30, 81, 162);
 }
 
 
