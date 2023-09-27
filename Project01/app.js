@@ -34,6 +34,9 @@ function setup() {
         indexArray[i - 1] = i;
     }
     console.log('page is Ready to go!');
+    soundStart.setVolume(0.15);
+    soundWrong.setVolume(0.05);
+    soundCorrect.setVolume(0.05);
     getRandomPokemonInfo();
     bt00 = document.getElementById("option_00");
     bt01 = document.getElementById("option_01");
@@ -74,7 +77,6 @@ function onCorrect() {
     console.log("Correct!")
     //show gif
     document.getElementById("page_dfruit").src = "./SoundFile/d.gif";
-    soundCorrect.setVolume(0.5);
     soundCorrect.play();
 }
 
@@ -88,7 +90,7 @@ function finishLoad() {
 
 
 //HTML JS
-
+//relocate to setup in p5js
 window.addEventListener('load', function () {
 
 });
