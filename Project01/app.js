@@ -7,6 +7,8 @@ let correctName = "Rocky";
 let maxIndex = 809;  //max index in pokedex
 let options = ["a", "b", "c", "d"];  //default displayed options 
 let indexArray = [];
+let correctRecords = [];
+let remainList = [];
 let wrongOptionsCounter = 0;
 let img;
 let currentImg;
@@ -15,6 +17,7 @@ let thresholdValue = 1.0;
 let isReveal = false;
 let gif;
 let soundStart, soundCorrect, soundWrong;
+let bgImage;
 
 
 //——————————————P5 js————————————————————
@@ -24,11 +27,13 @@ function preload() {
     soundStart = loadSound("./SoundFile/whosthatpokemon.mp3");
     soundCorrect = loadSound("./SoundFile/correctSound.mp3");
     soundWrong = loadSound("./SoundFile/wrongSound.mp3");
+    bgImage = loadImage("./SoundFile/bgp.png");
 }
 
 function setup() {
     p5Canvas = createCanvas(192, 192);
     p5Canvas.parent('page_imgSection');
+    p5Canvas.className += "page_canvas";
     //fill the index array, will be used for later random seletion function
     for (let i = 1; i <= 809; i++) {
         indexArray[i - 1] = i;
@@ -50,6 +55,7 @@ function beginReveal() {
 
 function draw() {
     p5Canvas.clear();
+    //image(bgImage,0,0,192,192);
     if (currentImg) {
         image(currentImg, 0, 0, 192, 192);
         if (isReveal == true) {
@@ -78,13 +84,14 @@ function onCorrect() {
     //show gif
     document.getElementById("page_dfruit").src = "./SoundFile/d.gif";
     soundCorrect.play();
+    changeCursor(2);
 }
 
 function removeGif() {
     document.getElementById("page_dfruit").src = "";
 }
 
-function finishLoad() {
+function changeCursor(ballType) {
 
 }
 
