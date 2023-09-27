@@ -29,7 +29,7 @@ body {
   -webkit-box-shadow: 6px 5px 24px #666666;
   -moz-box-shadow: 6px 5px 24px #666666;
   box-shadow: 6px 5px 24px #666666;
-  font-family: Arial;
+  font-family: 'Courier New', monospace;
   color: #fafafa;
   font-size: 27px;
   padding: 19px;
@@ -48,11 +48,12 @@ body {
 
 .page_score {
   text-align: center;
+  font-family: Garamond, serif;
 }
 
 .page_desc {
   text-align: center;
-
+  font-family: Garamond, serif;
 }
 
 /* Style the header */
@@ -60,6 +61,7 @@ header {
   background-color: darkred;
   padding: 30px;
   text-align: center;
+  font-family: Garamond, serif;
   font-size: 35px;
   color: white;
 }
