@@ -39,7 +39,7 @@ function setup() {
         indexArray[i - 1] = i;
     }
     console.log('page is Ready to go!');
-    soundStart.setVolume(0.15);
+    soundStart.setVolume(0.5);
     soundWrong.setVolume(0.05);
     soundCorrect.setVolume(0.05);
     getRandomPokemonInfo();
